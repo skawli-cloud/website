@@ -100,10 +100,57 @@
             body.classList.toggle('lock-scroll');
         });
     </script>
+        <!-- ========== ۱. اضافه کردن کتابخانه Supabase ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- کد جاوا اسکریپت برای منوی موبایل و بارگذاری پست‌ها -->
+    <script>
+        // این کد را در بالای کد جاوا اسکریپت خود قرار دهید
+const SUPABASE_URL = 'https://cgytdesjfhgvvpqeyrxf.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNneXRkZXNqZmhndnZwcWV5cnhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYzMjg3MzgsImV4cCI6MjA3MTkwNDczOH0.OkCsY4WiEuqYRXfLrOc9bT7z8fVn67nyi4sS3iKcyKg';
+
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+async function loadPosts() {
+    const grid = document.querySelector('.grid-container');
+    grid.innerHTML = ''; // خالی کردن لیست فعلی
+
+    const { data: posts, error } = await supabase
+        .from('posts')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+    if (error) {
+        console.error('Error loading posts:', error);
+        return;
+    }
+
+    for (const post of posts) {
+        const postHTML = `
+            <article class="card">
+                <img src="${post.image_url}" alt="تصویر خبر" class="card-img">
+                <div class="card-content">
+                    <h3>${post.title}</h3>
+                    <p>${post.content.substring(0, 100)}...</p>
+                </div>
+            </article>
+        `;
+        grid.innerHTML += postHTML;
+    }
+}
+
+// اجرای تابع هنگام بارگذاری صفحه
+loadPosts();
+        // کدهای شما در اینجا قرار می‌گیرند
+    </script>
+
+</body>
+</html>
 
 </body>
 
 </html>
+
 
 
 
