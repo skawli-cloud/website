@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
 
   const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
   const REPO_OWNER = "skawli-cloud"; // نام کاربری GitHub شما
-  const REPO_NAME = "sepidehqods";   // نام مخزن شما
+  const REPO_NAME = "website";        // نام مخزن شما
   const BRANCH = "main";             // شاخه اصلی مخزن
 
   // ایجاد نام فایل از عنوان پست
