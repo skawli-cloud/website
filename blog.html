@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آخرین اخبار - سپیده قدس</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- هدر سایت (کامل و صحیح) -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="لوگوی سپیده قدس" class="logo-img">
+                <span class="logo-text">سپیده قدس</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="blog.html">وبلاگ</a></li>
+                    <li><a href="index.html#strongholds">سنگرها</a></li>
+                    <li><a href="index.html#contact">تماس با ما</a></li>
+                </ul>
+                                </nav>
+                <!-- ========== شروع دکمه‌های تغییر زبان ========== -->
+            <div class="language-switcher">
+                <a href="/index.html" class="lang-link active">FA</a>
+                <a href="/en/index.html" class="lang-link">EN</a>
+                <a href="/ar/index.html" class="lang-link">AR</a>
+            </div>
+            <!-- ========== پایان دکمه‌های تغییر زبان ========== -->
+            </nav>
+            <button class="hamburger-menu" aria-label="باز و بسته کردن منو">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- بخش اصلی صفحه وبلاگ -->
+        <section class="content-section">
+            <div class="container">
+                <!-- عنوان صفحه -->
+                <div class="page-header">
+                    <h1>وبلاگ سپیده قدس</h1>
+                    <p>صدای مردم</p>
+                </div>
+
+                <!-- لیست تمام اخبار -->
+                <div class="grid-container">
+                    <!-- خبر ۱ -->
+                    <article class="card">
+                        <img src="1.png" alt="تصویر خبر" class="card-img">
+                        <div class="card-content">
+                            <p class="news-date">1404/0/0</p>
+                            <h3>در دنیای امروز، نبرد اصلی در میدان رسانه‌هاست. چگونه می‌توان در این جنگ پیروز شد؟</h3>
+                            <p>در دنیای امروز، میدان اصلی نبرد نه فقط در مرزها، بلکه در رسانه‌هاست. ما باور داریم که صدای مظلومان نباید در هیاهوی پروپاگاندای قدرت‌ها خاموش شود. رسالت ما این است که با رسانه‌ای که در اختیار داریم، روایت واقعی از غزه و مردم بی‌گناه فلسطین را به گوش جهان برسانیم.
+
+پیروزی در این جنگ رسانه‌ای، تنها با سلاح حقیقت و وجدان انسانی ممکن است. ما می‌خواهیم با تولید محتوای صادقانه، انتشار تصاویر و روایت‌های واقعی، و بازتاب رنج‌ها و مقاومت‌ها، دیوار سکوت را بشکنیم.
+
+این رسانه برای ما فقط یک ابزار اطلاع‌رسانی نیست؛ سنگری است در برابر تحریف واقعیت و نادیده‌گرفتن حقوق انسان‌ها. ما در کنار مردم فلسطین ایستاده‌ایم و تلاش می‌کنیم صدای آن‌ها باشیم، چون ایمان داریم که در نهایت، حقیقت و عدالت بر دروغ و ظلم پیروز خواهد شد..</p>
+                        </div>
+                    </article>
+                    <!-- خبر ۱ -->
+                    <article class="card">
+                        <img src="topic1.png" alt="تصویر خبر" class="card-img">
+                        <div class="card-content">
+                            <p class="news-date">1404/0/0</p>
+                            <h3>سپیده قدس</h3>
+                            <p>صدای بی صدایان</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- فوتر سایت (کامل و صحیح) -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 سپیده قدس. قیامی که با آگاهی به پیروزی می‌رسد.</p>
+        </div>
+    </footer>
+
+    <!-- کد جاوا اسکریپت برای منوی موبایل (کامل و صحیح) -->
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.main-nav');
+        const body = document.body;
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            body.classList.toggle('lock-scroll');
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

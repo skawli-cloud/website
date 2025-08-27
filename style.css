@@ -1,0 +1,415 @@
+/* تعریف فونت محلی با فرمت صحیح TTF */
+@font-face {
+  font-family: 'IranNastaliq';
+  src: url('IranNastaliq.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* General Styling */
+:root {
+    --primary-green: #2c6b2f;
+    --secondary-green: #4a934a;
+    --light-gray: #f8f9fa;
+    --dark-charcoal: #212529;
+    --pure-white: #ffffff;
+    --text-color: #495057;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--pure-white); /* فقط این خط باید باشد */
+    transition: padding-right 0.3s ease;
+}
+
+body.lock-scroll {
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==================================================
+   DESKTOP STYLES
+   ================================================== */
+
+/* Header & Navigation */
+.main-header {
+    background: var(--primary-green);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 65px;
+    margin-left: 15px;
+}
+
+.logo-text {
+    color: var(--pure-white);
+    font-weight: 700;
+    font-family: 'IranNastaliq', 'Vazirmatn', sans-serif;
+    font-size: 3.0rem;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: 30px;
+}
+
+.main-nav a {
+    color: var(--pure-white);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 50, 20, 0.75);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 15px;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    color: var(--pure-white);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: var(--pure-white);
+    margin-top: 1rem;
+    margin-bottom: 2rem; /* بازگشت به مقدار اولیه */
+}```
+
+/* (بقیه استایل‌های دسکتاپ بدون تغییر) */
+.content-section{padding:80px 0}.bg-light{background-color:var(--light-gray)}.section-title{text-align:center;margin-bottom:50px}.section-title h2{font-size:2.5rem;color:var(--primary-green)}.section-title p{font-size:1.1rem;color:#6c757d}.page-header{text-align:center;margin-bottom:50px;padding-top:40px}.page-header h1{font-size:2.8rem;color:var(--primary-green)}.page-header p{font-size:1.2rem;color:#6c757d;margin-top:10px}.grid-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}.card,.feature-card{background:var(--pure-white);border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,.07);transition:transform .3s ease,box-shadow .3s ease}.card:hover,.feature-card:hover{transform:translateY(-10px);box-shadow:0 10px 30px rgba(0,0,0,.1)}.card-img{width:100%;height:200px;object-fit:cover}.card-content{padding:25px}.card-content h3{margin-bottom:10px;color:var(--dark-charcoal)}.feature-card{padding:40px 30px;text-align:center;border-top:4px solid var(--primary-green)}.feature-icon{margin-bottom:20px;color:var(--primary-green)}.feature-card h3{color:var(--dark-charcoal);margin-bottom:15px;font-size:1.4rem}.feature-card p{font-size:1rem;line-height:1.8}.contact-form{max-width:700px;margin:0 auto}.contact-form .form-group{display:flex;gap:20px;margin-bottom:20px}.contact-form input,.contact-form textarea{width:100%;padding:15px;border-radius:5px;border:1px solid #ced4da;font-family:'Vazirmatn',sans-serif;font-size:1rem}.contact-form textarea{margin-bottom:20px}.contact-form button{width:100%}.social-media {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 40px; /* === این خط جدید، فضا را اضافه می‌کند === */
+}
+
+.social-media h4{font-size:1.2rem;color:var(--dark-charcoal);margin-bottom:25px}.social-links a{color:var(--primary-green);border:2px solid var(--primary-green);border-radius:50px;padding:10px 25px;margin:0 10px;text-decoration:none;font-weight:700;display:inline-block;transition:all .3s ease}.social-links a:hover{background-color:var(--primary-green);color:var(--pure-white);transform:translateY(-3px)}.main-footer{background:var(--dark-charcoal);color:var(--light-gray);text-align:center;padding:10px 0}.btn{display:inline-block;padding:12px 30px;text-decoration:none;border-radius:50px;font-weight:700;transition:all .3s ease;border:2px solid var(--primary-green)}.btn-primary{background:var(--primary-green);color:var(--pure-white)}.btn-primary:hover{background:var(--secondary-green);border-color:var(--secondary-green);transform:translateY(-3px)}.btn-secondary{background:transparent;color:var(--primary-green)}.btn-secondary:hover{background:var(--primary-green);color:var(--pure-white)}
+
+/* ==================================================
+   بخش شمارنده زنده هشتگ
+   ================================================== */
+.counter-container {
+    text-align: center;
+    background: var(--pure-white);
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hashtag-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-green);
+    margin-bottom: 20px;
+    direction: ltr; /* برای نمایش صحیح هشتگ */
+}
+
+.counter-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--dark-charcoal);
+    margin-bottom: 10px;
+    direction: ltr; /* برای نمایش صحیح اعداد */
+    font-family: monospace; /* برای جلوگیری از پرش اعداد */
+}
+
+.counter-label {
+    font-size: 1rem;
+    color: #888;
+}
+/* ==================================================
+   استایل‌های صفحه کامل درباره ما (about.html)
+   ================================================== */
+
+.about-full-content {
+    max-width: 800px; /* برای خوانایی بهتر، عرض محتوا را محدود می‌کنیم */
+    margin: 0 auto;
+    padding-bottom: 60px; /* فاصله از فوتر */
+}
+
+.about-full-content h2 {
+    font-size: 2.2rem;
+    color: var(--primary-green);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.about-full-content p {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.section-divider {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 60px 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-green);
+}
+
+.feature-item h3 {
+    margin-bottom: 15px;
+    color: var(--dark-charcoal);
+}
+
+/* استایل مخصوص موبایل برای همین بخش */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-full-content h2 {
+        font-size: 1.8rem;
+    }
+}
+```css
+/* ==================================================
+   استایل دکمه‌های تغییر زبان
+   ================================================== */
+.language-switcher {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px; /* فاصله از منوی اصلی */
+}
+
+.lang-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.lang-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--pure-white);
+}
+
+.lang-link.active {
+    background-color: var(--pure-white);
+    color: var(--primary-green);
+}
+/* ==================================================
+   MOBILE STYLES
+   ================================================== */
+@media(max-width: 768px) {
+    
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+        z-index: 1001;
+    }
+
+    .hamburger-menu .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--pure-white);
+    }
+
+    .main-nav {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--primary-green);
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        padding-top: 85px;
+    }
+
+    .main-nav.active {
+        left: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav ul li {
+        margin: 0;
+        padding: 15px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .main-nav ul li:first-child {
+        border-top: none;
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero-section {
+        height: 52vh;
+    }
+    /* === تغییرات جدید فقط برای موبایل === */
+    .hero-content {
+        padding-top: 70px; /* متن‌ها را کمی پایین می‌آورد */
+    }
+    
+    .hero-content .btn {
+        margin-top: 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form .form-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contact-form .form-group input {
+        margin-bottom: 20px;
+    }
+
+    .social-links a {
+        margin: 8px 5px;
+    }
+}
+
+/* === استایل جدید برای تاریخ اخبار === */
+.news-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+    /* --- Mobile Counter Adjustments --- */
+    .counter-number {
+        font-size: 2.8rem; /* کاهش اندازه فونت شمارنده در موبایل */
+    }
+
+    .hashtag-name {
+        font-size: 1.3rem; /* کاهش اندازه فونت هشتگ در موبایل */
+    }
+
+
+
+
+
+
